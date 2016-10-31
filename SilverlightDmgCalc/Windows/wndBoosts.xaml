@@ -1,0 +1,26 @@
+﻿<controls:ChildWindow x:Class="SilverlightDmgCalc.wndBoosts"
+           xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" 
+           xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" 
+           xmlns:controls="clr-namespace:System.Windows.Controls;assembly=System.Windows.Controls"
+           Width="307" Height="287"
+           Title="Stat Boosts" xmlns:my="clr-namespace:SilverlightDmgCalc" Style="{StaticResource ChildWindowStyle}">
+    
+    <Grid x:Name="LayoutRoot" Margin="2">
+        <Grid.RowDefinitions>
+            <RowDefinition />
+            <RowDefinition Height="Auto" />
+        </Grid.RowDefinitions>
+        <Button x:Name="CancelButton" Content="Cancel" Width="75" Height="23" HorizontalAlignment="Right" Margin="0,12,0,0" Grid.Row="1" />
+        <Button x:Name="OKButton" Content="OK" Width="75" Height="23" HorizontalAlignment="Right"  Margin="0,12,79,0" Grid.Row="1" />
+        <TextBlock Height="23" HorizontalAlignment="Left" Margin="8,21,0,0" Name="TextBlock2" Text="Attack" VerticalAlignment="Top" />
+        <my:StatBoostChanger Height="33" HorizontalAlignment="Left" Margin="78,12,0,0" x:Name="StatBoostChanger2" VerticalAlignment="Top" Width="201" />
+        <TextBlock Height="23" HorizontalAlignment="Left" Margin="8,60,0,0" Name="TextBlock3" Text="Defense" VerticalAlignment="Top" />
+        <my:StatBoostChanger Height="33" HorizontalAlignment="Left" Margin="78,50,0,0" x:Name="StatBoostChanger3" VerticalAlignment="Top" Width="201" />
+        <TextBlock Height="23" HorizontalAlignment="Left" Margin="7,99,0,0" Name="TextBlock4" Text="Sp.Attack" VerticalAlignment="Top" />
+        <my:StatBoostChanger Height="33" HorizontalAlignment="Left" Margin="78,90,0,0" x:Name="StatBoostChanger4" VerticalAlignment="Top" Width="201" />
+        <TextBlock Height="23" HorizontalAlignment="Left" Margin="8,138,0,0" Name="TextBlock5" Text="Sp.Defense" VerticalAlignment="Top" />
+        <my:StatBoostChanger Height="33" HorizontalAlignment="Left" Margin="78,128,0,0" x:Name="StatBoostChanger5" VerticalAlignment="Top" Width="201" />
+        <TextBlock Height="23" HorizontalAlignment="Left" Margin="8,177,0,0" Name="TextBlock6" Text="Speed" VerticalAlignment="Top" />
+        <my:StatBoostChanger Height="33" HorizontalAlignment="Left" Margin="78,167,0,0" x:Name="StatBoostChanger6" VerticalAlignment="Top" Width="201" />
+    </Grid>
+</controls:ChildWindow>

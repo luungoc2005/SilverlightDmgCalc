@@ -1,0 +1,311 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>
+    </SchemaVersion>
+    <ProjectGuid>{6F4AA9F1-C74F-4BF4-BBC7-9532D07255C7}</ProjectGuid>
+    <ProjectTypeGuids>{A1591282-1198-4647-A2B1-27E5FF5F6F3B};{F184B08F-C81C-45F6-A57F-5ABD9991F28F}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <RootNamespace>SilverlightDmgCalc</RootNamespace>
+    <AssemblyName>SilverlightDmgCalc</AssemblyName>
+    <TargetFrameworkIdentifier>Silverlight</TargetFrameworkIdentifier>
+    <TargetFrameworkVersion>v5.0</TargetFrameworkVersion>
+    <SilverlightVersion>$(TargetFrameworkVersion)</SilverlightVersion>
+    <SilverlightApplication>true</SilverlightApplication>
+    <SupportedCultures>
+    </SupportedCultures>
+    <XapOutputs>true</XapOutputs>
+    <GenerateSilverlightManifest>true</GenerateSilverlightManifest>
+    <XapFilename>SilverlightDmgCalc.xap</XapFilename>
+    <SilverlightManifestTemplate>My Project\AppManifest.xml</SilverlightManifestTemplate>
+    <SilverlightAppEntry>SilverlightDmgCalc.App</SilverlightAppEntry>
+    <TestPageFileName>SilverlightDmgCalcTestPage.html</TestPageFileName>
+    <CreateTestPage>true</CreateTestPage>
+    <ValidateXaml>true</ValidateXaml>
+    <EnableOutOfBrowser>true</EnableOutOfBrowser>
+    <OutOfBrowserSettingsFile>My Project\OutOfBrowserSettings.xml</OutOfBrowserSettingsFile>
+    <UsePlatformExtensions>false</UsePlatformExtensions>
+    <ThrowErrorsInValidation>true</ThrowErrorsInValidation>
+    <LinkedServerProject>
+    </LinkedServerProject>
+    <Utf8Output>true</Utf8Output>
+    <ExpressionBlendVersion>4.0.20525.0</ExpressionBlendVersion>
+    <SignManifests>false</SignManifests>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <!-- This property group is only here to support building this project using the 
+       MSBuild 3.5 toolset. In order to work correctly with this older toolset, it needs 
+       to set the TargetFrameworkVersion to v3.5 -->
+  <PropertyGroup Condition="'$(MSBuildToolsVersion)' == '3.5'">
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <NoStdLib>true</NoStdLib>
+    <NoConfig>true</NoConfig>
+    <MyType>Empty</MyType>
+    <OutputPath>..\SilverlightDmgCalc.Web\ClientBin\</OutputPath>
+    <DocumentationFile>SilverlightDmgCalc.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+    <DefineConstants>SILVERLIGHT=1</DefineConstants>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <NoStdLib>true</NoStdLib>
+    <NoConfig>true</NoConfig>
+    <Optimize>true</Optimize>
+    <OutputPath>..\SilverlightDmgCalc.Web\ClientBin\</OutputPath>
+    <DocumentationFile>SilverlightDmgCalc.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+    <DefineConstants>SILVERLIGHT=1</DefineConstants>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionExplicit>On</OptionExplicit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionCompare>Binary</OptionCompare>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionStrict>Off</OptionStrict>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionInfer>On</OptionInfer>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="mscorlib" />
+    <Reference Include="System.Windows" />
+    <Reference Include="system" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Windows.Controls, Version=5.0.5.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
+    <Reference Include="System.Windows.Controls.Input, Version=5.0.5.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
+    <Reference Include="System.Windows.Controls.Input.Toolkit, Version=5.0.5.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Xml.Linq, Version=5.0.5.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
+  </ItemGroup>
+  <ItemGroup>
+    <Import Include="Microsoft.VisualBasic" />
+    <Import Include="System" />
+    <Import Include="System.Collections.Generic" />
+    <Import Include="System.Linq" />
+    <Import Include="System.Net" />
+    <Import Include="System.Windows" />
+    <Import Include="System.Windows.Controls" />
+    <Import Include="System.Windows.Documents" />
+    <Import Include="System.Windows.Ink" />
+    <Import Include="System.Windows.Input" />
+    <Import Include="System.Windows.Media" />
+    <Import Include="System.Windows.Media.Animation" />
+    <Import Include="System.Windows.Shapes" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="App.xaml.vb">
+      <DependentUpon>App.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="MainPage.xaml.vb">
+      <DependentUpon>MainPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\modCalc.vb" />
+    <Compile Include="Modules\modCalc_New.vb" />
+    <Compile Include="Modules\modMain.vb" />
+    <Compile Include="Modules\modMovesets.vb" />
+    <Compile Include="Modules\modOther.vb" />
+    <Compile Include="Modules\modStructures.vb" />
+    <Compile Include="Modules\ObservableCollectionExtension.vb" />
+    <Compile Include="My Project\AssemblyInfo.vb" />
+    <Compile Include="User Controls\NavBar.xaml.vb">
+      <DependentUpon>NavBar.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Windows\wndMovesets.xaml.vb">
+      <DependentUpon>wndMovesets.xaml</DependentUpon>
+    </Compile>
+    <None Include="Copy of data.zip" />
+    <None Include="User Controls\Activity.vb" />
+    <Compile Include="User Controls\GUIContainer.xaml.vb">
+      <DependentUpon>GUIContainer.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="User Controls\PokeGUI.xaml.vb">
+      <DependentUpon>PokeGUI.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="User Controls\StatBoostChanger.xaml.vb">
+      <DependentUpon>StatBoostChanger.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Windows\AboutWindow.xaml.vb">
+      <DependentUpon>AboutWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Windows\wndCoverage.xaml.vb">
+      <DependentUpon>wndCoverage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Windows\wndAttributes.xaml.vb">
+      <DependentUpon>wndAttributes.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Windows\wndBoosts.xaml.vb">
+      <DependentUpon>wndBoosts.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Windows\wndEditMove.xaml.vb">
+      <DependentUpon>wndEditMove.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Windows\wndEditStats.xaml.vb">
+      <DependentUpon>wndEditStats.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Windows\wndEVs.xaml.vb">
+      <DependentUpon>wndEVs.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Windows\wndFOptions.xaml.vb">
+      <DependentUpon>wndFOptions.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Windows\wndImport.xaml.vb">
+      <DependentUpon>wndImport.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Windows\wndIVs.xaml.vb">
+      <DependentUpon>wndIVs.xaml</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <ApplicationDefinition Include="App.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </ApplicationDefinition>
+    <Page Include="JetPack\Brushes.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="JetPack\CoreStyles.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="JetPack\Fonts.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <None Include="User Controls\Activity.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </None>
+    <Page Include="MainPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="JetPack\SDKStyles.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="JetPack\Styles.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="User Controls\CustomTheme.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="User Controls\GUIContainer.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="User Controls\NavBar.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="User Controls\PokeGUI.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="User Controls\StatBoostChanger.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="JetPack\ToolkitStyles.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Windows\AboutWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Windows\wndCoverage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Windows\wndAttributes.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Windows\wndBoosts.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Windows\wndEditMove.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Windows\wndEditStats.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Windows\wndEVs.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Windows\wndFOptions.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Windows\wndImport.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Windows\wndIVs.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Windows\wndMovesets.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="data.zip" />
+    <None Include="My Project\AppManifest.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\add.png" />
+    <Resource Include="Images\rem.png" />
+    <Resource Include="Images\sync.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\calculate.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\export.png" />
+    <Resource Include="Images\import.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="My Project\OutOfBrowserSettings.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\help.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\Silverlight\$(SilverlightVersion)\Microsoft.Silverlight.VisualBasic.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{A1591282-1198-4647-A2B1-27E5FF5F6F3B}">
+        <SilverlightProjectProperties />
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+</Project>

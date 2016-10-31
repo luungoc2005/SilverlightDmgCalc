@@ -1,0 +1,17 @@
+﻿<Application xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" 
+             x:Class="SilverlightDmgCalc.App"
+             xmlns:sdk="http://schemas.microsoft.com/winfx/2006/xaml/presentation/sdk"
+             xmlns:toolkit="http://schemas.microsoft.com/winfx/2006/xaml/presentation/toolkit"
+             >
+    <Application.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="JetPack/Styles.xaml"/>
+                <ResourceDictionary Source="JetPack/CoreStyles.xaml"/>
+                <ResourceDictionary Source="JetPack/SDKStyles.xaml"/>
+                <ResourceDictionary Source="JetPack/ToolkitStyles.xaml"/>
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+    </Application.Resources>
+</Application>

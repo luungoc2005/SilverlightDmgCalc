@@ -1,0 +1,58 @@
+﻿<controls:ChildWindow x:Class="SilverlightDmgCalc.wndFOptions"
+           xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" 
+           xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" 
+           xmlns:controls="clr-namespace:System.Windows.Controls;assembly=System.Windows.Controls"
+           Width="387" Height="326"
+           Title="Field Options" Style="{StaticResource ChildWindowStyle}">
+    
+    <Grid x:Name="LayoutRoot" Margin="2">
+        <Grid.RowDefinitions>
+            <RowDefinition />
+            <RowDefinition Height="Auto" />
+        </Grid.RowDefinitions>
+        <Grid>
+            <CheckBox Content="Flash Fire" Height="16" HorizontalAlignment="Left" Margin="5,44,0,0" Name="chkFF" VerticalAlignment="Top" />
+            <CheckBox Content="Me First" Height="16" HorizontalAlignment="Left" Margin="5,66,0,0" Name="chkMF" VerticalAlignment="Top" />
+            <CheckBox Content="Helping Hand" Height="16" HorizontalAlignment="Left" Margin="5,88,0,0" Name="chkHH" VerticalAlignment="Top" />
+            <CheckBox Content="Charge" Height="16" HorizontalAlignment="Left" Margin="5,110,0,0" Name="chkCharge" VerticalAlignment="Top" />
+            <TextBlock Text="Metronome Counter" Height="28" HorizontalAlignment="Left" Margin="5,132,0,0" Name="lblMetronome" VerticalAlignment="Top" />
+            <Slider BorderThickness="0" Height="23" LargeChange="1" Margin="6,152,0,0" Maximum="10" Name="sldMetro" SmallChange="1" VerticalAlignment="Top" HorizontalAlignment="Left" Width="151" />
+            <TextBlock Text="{Binding Path=Value, ElementName=sldMetro, Mode=OneWay}" Height="23" HorizontalAlignment="Left" Margin="156,152,0,0" Name="lblMetroCnt" VerticalAlignment="Top" Width="29" TextAlignment="Right" />
+            <CheckBox Content="Reflect" Height="16" HorizontalAlignment="Left" Margin="199,158,0,0" Name="chkRF" VerticalAlignment="Top" />
+            <CheckBox Content="Light Screen" Height="17" HorizontalAlignment="Left" Margin="199,180,0,0" Name="chkLS" VerticalAlignment="Top" />
+            <CheckBox Content="Mud Sport" Height="16" HorizontalAlignment="Left" Margin="199,202,0,0" Name="chkMS" VerticalAlignment="Top" />
+            <CheckBox Content="Water Sport" Height="16" HorizontalAlignment="Left" Margin="199,224,0,0" Name="chkWS" VerticalAlignment="Top" />
+            <Rectangle Height="226" Width="2" HorizontalAlignment="Left" Margin="191,14,0,0" Name="Rectangle1" VerticalAlignment="Top" Fill="#FFD8D8D8" />
+            <TextBlock Text="Entry Hazards" Height="16" HorizontalAlignment="Left" Margin="200,44,0,0" Name="lblEH" VerticalAlignment="Top" />
+            <CheckBox Height="16" HorizontalAlignment="Left" Margin="199,66,0,0" Name="chkSR" VerticalAlignment="Top" Content="Stealth Rock" />
+            <CheckBox Content="Spikes:" Height="16" HorizontalAlignment="Left" Margin="199,88,0,0" Name="chkSpikes" VerticalAlignment="Top" IsChecked="False" />
+            <RadioButton Content="1 Layer" Height="16" HorizontalAlignment="Left" Margin="278,88,0,0" Name="optSpikes1" VerticalAlignment="Top" />
+            <RadioButton Content="2 Layers" Height="16" HorizontalAlignment="Left" Margin="278,110,0,0" Name="optSpikes2" VerticalAlignment="Top" />
+            <RadioButton Content="3 Layers" Height="16" HorizontalAlignment="Left" Margin="278,132,0,0" Name="optSpikes3" VerticalAlignment="Top" />
+
+            <Border BorderBrush="Silver" BorderThickness="1" Height="23" HorizontalAlignment="Left" 
+                    Margin="5,14,0,0" VerticalAlignment="Top" Width="180" CornerRadius="2">
+                <Border.Background>
+                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                        <GradientStop Color="White" Offset="0" />
+                        <GradientStop Color="#FFEBE8E8" Offset="1" />
+                    </LinearGradientBrush>
+                </Border.Background>
+                <TextBlock Height="23" Text="Attacking Options" TextAlignment="Center" Margin="0,3,0,0" Foreground="Black" />
+            </Border>
+
+            <Border BorderBrush="Silver" BorderThickness="1" Height="23" HorizontalAlignment="Left" 
+                     Margin="199,13,0,0" VerticalAlignment="Top" Width="154" CornerRadius="2">
+                <Border.Background>
+                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                        <GradientStop Color="White" Offset="0" />
+                        <GradientStop Color="#FFEBE8E8" Offset="1" />
+                    </LinearGradientBrush>
+                </Border.Background>
+                <TextBlock Height="23" Text="Defending Options" TextAlignment="Center" Padding="0,3,0,0" Foreground="Black" />
+            </Border>
+        </Grid>
+        <Button x:Name="CancelButton" Content="Cancel" Width="75" Height="23" HorizontalAlignment="Right" Margin="0,12,0,0" Grid.Row="1" />
+        <Button x:Name="OKButton" Content="OK" Width="75" Height="23" HorizontalAlignment="Right"  Margin="0,12,79,0" Grid.Row="1" />
+    </Grid>
+</controls:ChildWindow>

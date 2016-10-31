@@ -1,0 +1,7 @@
+<OutOfBrowserSettings ShortName="Pokemon Damage Calculator" EnableGPUAcceleration="True" ShowInstallMenuItem="True">
+  <OutOfBrowserSettings.Blurb>A Pokemon Damage Calculator for Generation 5</OutOfBrowserSettings.Blurb>
+  <OutOfBrowserSettings.WindowSettings>
+    <WindowSettings Title="Pokemon Damage Calculator" Height="680" Width="700" />
+  </OutOfBrowserSettings.WindowSettings>
+  <OutOfBrowserSettings.Icons />
+</OutOfBrowserSettings>

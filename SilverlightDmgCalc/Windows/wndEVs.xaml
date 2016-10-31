@@ -1,0 +1,47 @@
+﻿<controls:ChildWindow x:Class="SilverlightDmgCalc.wndEVs"
+           xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" 
+           xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" 
+           xmlns:controls="clr-namespace:System.Windows.Controls;assembly=System.Windows.Controls"
+           Width="309" Height="295"
+           Title="Edit EVs" Style="{StaticResource ChildWindowStyle}">
+    
+    <Grid x:Name="LayoutRoot" Margin="2">
+        <Grid.RowDefinitions>
+            <RowDefinition />
+            <RowDefinition Height="Auto" />
+        </Grid.RowDefinitions>
+
+        <Grid>
+            <TextBlock Text="HP" Height="28" HorizontalAlignment="Left" Margin="12,12,0,0" Name="Label1" VerticalAlignment="Top" />
+            <TextBlock Text="Attack" Height="28" HorizontalAlignment="Left" Margin="12,41,0,0" Name="Label2" VerticalAlignment="Top" />
+            <TextBlock Text="Defense" Height="28" HorizontalAlignment="Left" Margin="12,70,0,0" Name="Label3" VerticalAlignment="Top" />
+            <TextBlock Text="Sp.Attack" Height="28" HorizontalAlignment="Left" Margin="12,99,0,0" Name="Label4" VerticalAlignment="Top" />
+            <TextBlock Text="Sp.Defense" Height="28" HorizontalAlignment="Left" Margin="12,128,0,0" Name="Label5" VerticalAlignment="Top" />
+            <TextBlock Text="Speed" Height="28" HorizontalAlignment="Left" Margin="12,157,0,0" Name="Label6" VerticalAlignment="Top" />
+            <Slider Height="23" HorizontalAlignment="Left" Margin="99,12,0,0" Name="Slider1" VerticalAlignment="Top" Width="112" Maximum="255" SmallChange="4" LargeChange="4" />
+            <Slider Height="23" HorizontalAlignment="Left" LargeChange="4" Margin="99,41,0,0" Maximum="255" Name="Slider2" SmallChange="4" VerticalAlignment="Top" Width="112" />
+            <Slider Height="23" HorizontalAlignment="Left" LargeChange="4" Margin="99,70,0,0" Maximum="255" Name="Slider3" SmallChange="4" VerticalAlignment="Top" Width="112" />
+            <Slider Height="23" HorizontalAlignment="Left" LargeChange="4" Margin="99,99,0,0" Maximum="255" Name="Slider4" SmallChange="4" VerticalAlignment="Top" Width="112" />
+            <Slider Height="23" HorizontalAlignment="Left" LargeChange="4" Margin="99,128,0,0" Maximum="255" Name="Slider5" SmallChange="4" VerticalAlignment="Top" Width="112" />
+            <Slider Height="23" HorizontalAlignment="Left" LargeChange="4" Margin="99,157,0,0" Maximum="255" Name="Slider6" SmallChange="4" VerticalAlignment="Top" Width="112" />
+            <ProgressBar Height="16" HorizontalAlignment="Left" Margin="99,191,0,0" Name="ProgressBar1" VerticalAlignment="Top" Width="177" Maximum="510" />
+            <TextBox Height="23" HorizontalAlignment="Left" Margin="217,12,0,0" Name="TextBox1" VerticalAlignment="Top" Width="33" Text="{Binding ElementName=Slider1, Path=Value, Mode=TwoWay}" TextAlignment="Center" />
+            <TextBox Height="23" HorizontalAlignment="Left" Margin="217,41,0,0" Name="TextBox2" Text="{Binding ElementName=Slider2, Path=Value, Mode=TwoWay}" VerticalAlignment="Top" Width="33" TextAlignment="Center" />
+            <TextBox Height="23" HorizontalAlignment="Left" Margin="217,70,0,0" Name="TextBox3" Text="{Binding ElementName=Slider3, Path=Value, Mode=TwoWay}" VerticalAlignment="Top" Width="33" TextAlignment="Center" />
+            <TextBox Height="23" HorizontalAlignment="Left" Margin="217,99,0,0" Name="TextBox4" Text="{Binding ElementName=Slider4, Path=Value, Mode=TwoWay}" VerticalAlignment="Top" Width="33" TextAlignment="Center" />
+            <TextBox Height="23" HorizontalAlignment="Left" Margin="217,128,0,0" Name="TextBox5" Text="{Binding ElementName=Slider5, Path=Value, Mode=TwoWay}" VerticalAlignment="Top" Width="33" TextAlignment="Center" />
+            <TextBox Height="23" HorizontalAlignment="Left" Margin="217,157,0,0" Name="TextBox6" Text="{Binding ElementName=Slider6, Path=Value, Mode=TwoWay}" VerticalAlignment="Top" Width="33" TextAlignment="Center" />
+            <TextBlock Text="0" Height="16" Margin="55,191,0,0" Name="Label7" VerticalAlignment="Top" TextAlignment="Right" HorizontalAlignment="Left" Width="38" />
+            <Button Content="=" HorizontalAlignment="Left" Margin="256,12,0,0" Name="Button1" Width="20" Height="20" VerticalAlignment="Top" />
+            <Button Content="=" Height="20" HorizontalAlignment="Left" Margin="256,41,0,0" Name="Button2" VerticalAlignment="Top" Width="20" />
+            <Button Content="=" Height="20" HorizontalAlignment="Left" Margin="256,70,0,0" Name="Button3" VerticalAlignment="Top" Width="20" />
+            <Button Content="=" Height="20" HorizontalAlignment="Left" Margin="256,100,0,0" Name="Button4" VerticalAlignment="Top" Width="20" />
+            <Button Content="=" Height="20" HorizontalAlignment="Left" Margin="256,128,0,0" Name="Button5" VerticalAlignment="Top" Width="20" />
+            <Button Content="=" Height="20" HorizontalAlignment="Left" Margin="256,157,0,0" Name="Button6" VerticalAlignment="Top" Width="20" />
+        </Grid>
+
+        <Button x:Name="CancelButton" Content="Cancel" Width="75" Height="23" HorizontalAlignment="Right" Margin="0,12,0,0" Grid.Row="1" />
+        <Button x:Name="OKButton" Content="OK" Width="75" Height="23" HorizontalAlignment="Right"  Margin="0,12,79,0" Grid.Row="1" />
+        <Button x:Name="btnReset" Content="Reset" Grid.Row="1" Height="23" HorizontalAlignment="Left" Margin="3,10,0,0" VerticalAlignment="Top" Width="75" />
+    </Grid>
+</controls:ChildWindow>

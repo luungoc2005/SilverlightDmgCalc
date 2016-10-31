@@ -1,0 +1,73 @@
+﻿<UserControl
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:my="clr-namespace:SilverlightDmgCalc"
+    x:Class="SilverlightDmgCalc.MainPage" mc:Ignorable="d" 
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+    d:DesignWidth="696" d:DesignHeight="662">
+
+    <Grid x:Name="LayoutRoot" Background="#FF6C6C6C">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*" />
+            <RowDefinition Height="10" />
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="75" />
+            <ColumnDefinition Width="*" />
+        </Grid.ColumnDefinitions>
+        <!--<Grid.RowDefinitions>
+            <RowDefinition Height="63" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>-->
+
+        <my:NavBar x:Name="NavBar1" Grid.RowSpan="2" />
+        <ScrollViewer Grid.Row="0" VerticalScrollBarVisibility="Auto" HorizontalScrollBarVisibility="Auto" Grid.Column="1">
+        <Grid HorizontalAlignment="Stretch" x:Name="Grid1" VerticalAlignment="Stretch">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="285" />
+                <ColumnDefinition Width="5" />
+                <ColumnDefinition Width="*" />
+            </Grid.ColumnDefinitions>
+            <my:PokeGUI HorizontalAlignment="Stretch" x:Name="_GUIMain" VerticalAlignment="Top" Height="475" Margin="5,8,0,0" IsMainPoke="True"/>
+            <StackPanel Grid.Column="2" x:Name="_stackMain" Orientation="Horizontal" VerticalAlignment="Top" Height="650" AllowDrop="True"></StackPanel>
+            <Border BorderBrush="#F0484848" BorderThickness="1" Height="146" HorizontalAlignment="Left" Margin="5,488,0,0" x:Name="Border2" VerticalAlignment="Top" Width="280" CornerRadius="2">
+                <Grid>
+                    <Grid.Background>
+                        <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                            <GradientStop Color="DimGray" Offset="0" />
+                            <GradientStop Color="#FF3E3E3E" Offset="1" />
+                        </LinearGradientBrush>
+                    </Grid.Background>
+                    <ComboBox Height="23" x:Name="cmbWeather" Width="128" Margin="136,68,0,0" VerticalAlignment="Top" HorizontalAlignment="Left">
+                        <ComboBoxItem Content="No Weather" IsSelected="True" />
+                        <ComboBoxItem Content="Hail" />
+                        <ComboBoxItem Content="Rain" />
+                        <ComboBoxItem Content="Sandstorm" />
+                        <ComboBoxItem Content="Sunshine" />
+                    </ComboBox>
+                    <TextBlock Height="25" HorizontalAlignment="Left" Margin="136,49,0,0" x:Name="lblWeather" Text="Weather" VerticalAlignment="Top" />
+                    <CheckBox Content="Critical Hit" Height="16" HorizontalAlignment="Left" Margin="16,71,0,0" x:Name="chkCrit" VerticalAlignment="Top" />
+                    <CheckBox Content="Multiple targets" Height="16" HorizontalAlignment="Left" Margin="16,93,0,0" x:Name="chkTVT" VerticalAlignment="Top" />
+                    <CheckBox Content="No immunity" Height="16" HorizontalAlignment="Left" Margin="16,115,0,0" x:Name="chkImmunity" VerticalAlignment="Top" />
+                    <CheckBox Content="Wonder Room" Height="16" HorizontalAlignment="Left" Margin="16,49,0,0" x:Name="chkWonder" VerticalAlignment="Top" />
+                    <TextBlock Height="23" Margin="16,6,0,0" x:Name="TextBlock2" Text="Shared Options" VerticalAlignment="Top" TextAlignment="Center" FontWeight="Bold" HorizontalAlignment="Left" Width="248" />
+                </Grid>
+            </Border>
+            </Grid>
+        </ScrollViewer>
+        <Grid Visibility="Collapsed" Grid.Column="1" Name="gridMore" Height="50" VerticalAlignment="Bottom" Background="#FF8D8D8D">
+            <StackPanel Orientation="Vertical" HorizontalAlignment="Stretch" VerticalAlignment="Bottom" Margin="5,0,175,5">
+                <HyperlinkButton Content="Coverage Calculator" Name="HyperlinkButton2"/>
+                <HyperlinkButton Content="Send Feedback" NavigateUri="http://pokemon-online.eu/forums/member.php?4561-luungoc2005" TargetName="_blank" />
+            </StackPanel>
+            <StackPanel Orientation="Vertical" HorizontalAlignment="Right" VerticalAlignment="Top" Margin="6">
+                <TextBlock Text="Pokémon Damage Calculator" FontWeight="Bold" FontSize="14" TextAlignment="Right" HorizontalAlignment="Right" />
+                <TextBlock Text="For Generation 5" FontSize="10" FontStyle="Italic" TextAlignment="Right" Margin="0,0,5,5" />
+            </StackPanel>            
+        </Grid>
+        <Border Grid.Row="1" Grid.Column="1" Background="#FFB7B0B0">
+            <TextBlock Text="^" x:Name="txtMore" TextAlignment="Center" FontStretch="UltraExpanded" FontWeight="ExtraBold" FontFamily="Verdana" />
+        </Border>
+    </Grid>
+</UserControl>

@@ -1,0 +1,63 @@
+﻿<UserControl xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"  
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:sdk="http://schemas.microsoft.com/winfx/2006/xaml/presentation/sdk" 
+             xmlns:my="clr-namespace:SilverlightDmgCalc" x:Class="SilverlightDmgCalc.GUIContainer" 
+             mc:Ignorable="d" xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             d:DesignWidth="285">
+
+    <Grid>
+        <Button Content="Calculate" Height="23" HorizontalAlignment="Left" Margin="210,481,0,0" x:Name="Button1" VerticalAlignment="Top" Width="67" Style="{StaticResource BlueButton}"/>
+        <Grid Height="475" HorizontalAlignment="Left" x:Name="gridMain" VerticalAlignment="Top" Width="280">
+        </Grid>
+        <sdk:TabControl Height="146" HorizontalAlignment="Left" x:Name="TabControl1" VerticalAlignment="Top" Width="280" Margin="0,478,0,5">
+            <sdk:TabItem Header="Damage" x:Name="TabItem1">
+                <Grid>
+                    <ProgressBar Height="25" HorizontalAlignment="Left" Margin="6,29,0,0" x:Name="prgHP" VerticalAlignment="Top" Width="258" />
+                    <TextBlock Text="&lt;Name&gt;" Height="28" HorizontalAlignment="Left" Margin="6,6,0,0" x:Name="lblPokeName" VerticalAlignment="Top" Width="258" TextAlignment="Center" FontWeight="Bold" />
+                    <TextBlock Text="0-0 HP Damage" Height="20" HorizontalAlignment="Left" Margin="6,74,0,0" x:Name="lblHPDamage" VerticalAlignment="Top" Width="256" TextAlignment="Left" />
+                    <TextBlock Text="0% - 0%" Height="17" HorizontalAlignment="Left" Margin="6,60,0,0" x:Name="lblPerHPDmg" VerticalAlignment="Top" Width="256" TextAlignment="Left" />
+                    <TextBlock Height="17" HorizontalAlignment="Left" Margin="6,60,0,0" x:Name="txtHitsToKO" Text="OHKO" VerticalAlignment="Top" Width="256" TextAlignment="Right" />
+                    <HyperlinkButton Content="Copy Result" Height="23" HorizontalAlignment="Center" Name="btnCopy" VerticalAlignment="Top" Margin="99,90,99,0">
+                        <ToolTipService.ToolTip>
+                            <ToolTip Name="ttCopy" />
+                        </ToolTipService.ToolTip>
+                    </HyperlinkButton>
+                </Grid>
+            </sdk:TabItem>
+            <sdk:TabItem Header="Details" x:Name="TabItem2">
+                <Grid>
+                    <TextBox Height="112" HorizontalAlignment="Left" x:Name="txtCalcDetails" VerticalAlignment="Top" Width="268" VerticalScrollBarVisibility="Auto" BorderThickness="0" Background="{x:Null}" VerticalContentAlignment="Top" IsReadOnly="True" TextWrapping="Wrap" Style="{StaticResource DarkTextBox}"/>
+                </Grid>
+            </sdk:TabItem>
+            <sdk:TabItem Header="Reverse" x:Name="TabItem3">
+                <Grid>
+                    <TextBlock Text="HP Damage:" Height="28" HorizontalAlignment="Left" Margin="6,6,0,0" x:Name="lblRevHP" VerticalAlignment="Top" />
+                    <TextBox Height="23" HorizontalAlignment="Left" Margin="87,7,0,0" x:Name="txtHPRev" VerticalAlignment="Top" Width="52" Text="0" />
+                    <ComboBox Height="23" HorizontalAlignment="Left" Margin="145,7,0,0" x:Name="cmbHP" VerticalAlignment="Top" Width="57">
+                        <ComboBoxItem Content="HP" IsSelected="True" />
+                        <ComboBoxItem Content="Percent" />
+                    </ComboBox>
+                    <ComboBox Height="23" HorizontalAlignment="Left" Margin="192,36,0,0" x:Name="cmbCalcTarget" VerticalAlignment="Top" Width="72">
+                        <ComboBoxItem Content="Move Power" />
+                        <ComboBoxItem Content="EVs" IsSelected="True" />
+                        <ComboBoxItem Content="IVs" />
+                        <ComboBoxItem Content="Stats" />
+                    </ComboBox>
+                    <TextBlock Text="Target" Height="28" HorizontalAlignment="Left" Margin="6,35,0,0" x:Name="lblRevTarget" VerticalAlignment="Top" />
+                    <ComboBox Height="23" HorizontalAlignment="Left" Margin="87,35,0,0" x:Name="cmbTarget" VerticalAlignment="Top" Width="99">
+                        <ComboBoxItem Content="Attacker's" IsSelected="True" />
+                        <ComboBoxItem Content="Defender's" />
+                    </ComboBox>
+                    <ComboBox Height="23" HorizontalAlignment="Right" Margin="0,7,6,0" x:Name="cmbMinMax" VerticalAlignment="Top" Width="56">
+                        <ComboBoxItem Content="Min" IsSelected="True" />
+                        <ComboBoxItem Content="Max" />
+                    </ComboBox>
+                    <TextBox Height="41" HorizontalAlignment="Left" Margin="6,65,0,0" x:Name="lblRevResult" VerticalAlignment="Top" Width="258"
+                             VerticalContentAlignment="Top" TextWrapping="Wrap" IsReadOnly="True" Style="{StaticResource DarkTextBox}" 
+                             Text="Note: Experimenting with reverse calc function - major speedup! please report should you find any problems."/>
+                </Grid>
+            </sdk:TabItem>
+        </sdk:TabControl>
+    </Grid>
+</UserControl>

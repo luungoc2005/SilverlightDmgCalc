@@ -1,0 +1,106 @@
+﻿<UserControl x:Class="SilverlightDmgCalc.PokeGUI"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:sdk="http://schemas.microsoft.com/winfx/2006/xaml/presentation/sdk"
+    xmlns:toolkit="http://schemas.microsoft.com/winfx/2006/xaml/presentation/toolkit" 
+             BorderThickness="1" BorderBrush="Black" xmlns:my="clr-namespace:SilverlightDmgCalc" 
+             mc:Ignorable="d" xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             d:DesignHeight="477" d:DesignWidth="281">
+
+    <Grid x:Name="LayoutRoot">
+        <Border BorderThickness="2" HorizontalAlignment="Stretch" Name="Border2" VerticalAlignment="Stretch" CornerRadius="2,2,3,3" BorderBrush="DimGray">
+            <Border.Background>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="DimGray" Offset="0" />
+                    <GradientStop Color="#FF3E3E3E" Offset="1" />
+                </LinearGradientBrush>
+            </Border.Background>
+            <Border BorderThickness="1" CornerRadius="2" BorderBrush="#32D4D4D4"></Border>
+        </Border>
+        <Border BorderBrush="Silver" BorderThickness="1" Height="23" HorizontalAlignment="Left" Margin="12,8,0,0" Name="Border1" VerticalAlignment="Top" Width="258" CornerRadius="2">
+            <Border.Background>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="White" Offset="0" />
+                    <GradientStop Color="#FFE5E7E8" Offset="0.994" />
+                </LinearGradientBrush>
+            </Border.Background>
+            <TextBlock Height="23" Name="txtAtkDef" Text="Attacker" Width="257" TextAlignment="Center" FontWeight="Bold" Padding="0,3,0,0" Foreground="#FF4E4E4E">
+                <toolkit:ContextMenuService.ContextMenu>
+                    <toolkit:ContextMenu>
+                        <toolkit:MenuItem Header="Import" Name="mnuImport" Padding="0,0,5,0">
+                            <toolkit:MenuItem.Icon>
+                                <Image Source="/SilverlightDmgCalc;component/Images/import.png"></Image>
+                            </toolkit:MenuItem.Icon>
+                        </toolkit:MenuItem>                        
+                        <toolkit:MenuItem Header="Export" Name="mnuExport" Padding="0,0,5,0">
+                            <toolkit:MenuItem.Icon>
+                                <Image Source="/SilverlightDmgCalc;component/Images/export.png"></Image>
+                            </toolkit:MenuItem.Icon>
+                        </toolkit:MenuItem>
+                    </toolkit:ContextMenu>
+                </toolkit:ContextMenuService.ContextMenu>
+            </TextBlock>
+        </Border>
+
+        <CheckBox Content="Filter" Height="16" Name="chkMovesets" Margin="70,94,0,0" HorizontalAlignment="Left" VerticalAlignment="Top" IsEnabled="False" IsChecked="True" />
+        <Button Content="Stat Boosts" Height="23" Name="btnBoosts" Margin="144,181,0,0" VerticalAlignment="Top" HorizontalAlignment="Left" Width="74" />
+        <TextBlock Height="23" HorizontalAlignment="Left" Margin="12,36,0,0" Name="TextBlock1" Text="Pokémon" VerticalAlignment="Top" />
+        <ComboBox Height="23" HorizontalAlignment="Left" Margin="12,123,0,0" Name="cmbMoveset" VerticalAlignment="Top" Width="126" />
+        <TextBlock Height="23" HorizontalAlignment="Left" Margin="12,94,0,0" Name="TextBlock4" Text="Movesets" VerticalAlignment="Top" />
+        <sdk:AutoCompleteBox Height="23" HorizontalAlignment="Left" Margin="144,65,0,0" Name="cmbItem" VerticalAlignment="Top" Width="126" />
+        <TextBlock Height="23" HorizontalAlignment="Left" Margin="144,36,0,0" Name="TextBlock5" Text="Item" VerticalAlignment="Top" />
+        <TextBlock Height="23" HorizontalAlignment="Left" Margin="12,152,0,0" Name="TextBlock6" Text="Ability" VerticalAlignment="Top" />
+        <sdk:AutoCompleteBox Height="23" HorizontalAlignment="Left" Margin="12,181,0,0" Name="cmbAbility" VerticalAlignment="Top" Width="126" Visibility="Collapsed" />
+        <ComboBox Height="23" HorizontalAlignment="Left" Margin="12,181,0,0" Name="cmbAbility2" VerticalAlignment="Top" Width="126" Visibility="Visible" SelectedValue="{Binding Path=SelectedItem, Mode=TwoWay, ElementName=cmbAbility}" />
+        <TextBlock Height="23" HorizontalAlignment="Left" Margin="144,94,0,0" Name="TextBlock7" Text="Nature" VerticalAlignment="Top" />
+        <sdk:AutoCompleteBox Height="23" HorizontalAlignment="Left" Margin="144,123,0,0" Name="cmbNature" VerticalAlignment="Top" Width="126" />
+        <TextBlock Height="23" HorizontalAlignment="Left" Margin="12,210,0,0" Name="TextBlock8" Text="Move" VerticalAlignment="Top" />
+        <sdk:AutoCompleteBox Height="23" HorizontalAlignment="Left" Margin="12,239,0,0" Name="cmbMove" VerticalAlignment="Top" Width="205" Visibility="Collapsed">
+            <sdk:AutoCompleteBox.ItemTemplate>
+                <sdk:HierarchicalDataTemplate>
+                    <TextBlock Text="{Binding Path=Name}"></TextBlock>
+                </sdk:HierarchicalDataTemplate>
+            </sdk:AutoCompleteBox.ItemTemplate>
+        </sdk:AutoCompleteBox>
+        <Button Content="Edit" Height="23" HorizontalAlignment="Left" Margin="224,239,0,0" Name="btnEditMove" VerticalAlignment="Top" Width="46" />
+        <TextBlock Height="23" HorizontalAlignment="Left" Margin="12,272,0,0" Name="TextBlock9" Text="EVs" VerticalAlignment="Top" />
+        <Button Content="Edit" Height="23" Margin="224,297,0,0" Name="btnEditEV" VerticalAlignment="Top" HorizontalAlignment="Left" Width="46" />
+        <TextBox Height="23" Margin="12,297,0,0" Name="txtEV" VerticalAlignment="Top" HorizontalAlignment="Left" Width="206" Text="0-0-0-0-0-0" />
+        <TextBlock Height="23" HorizontalAlignment="Left" Margin="12,330,0,0" Name="TextBlock10" Text="IVs" VerticalAlignment="Top" />
+        <TextBox Height="23" HorizontalAlignment="Left" Margin="12,355,0,0" Name="txtIV" VerticalAlignment="Top" Width="206"  Text="0-0-0-0-0-0" />
+        <Button Content="Edit" Height="23" HorizontalAlignment="Left" Margin="224,355,0,0" Name="btnEditIVs" VerticalAlignment="Top" Width="46" />
+        <TextBlock Height="23" HorizontalAlignment="Left" Margin="12,388,0,0" Name="TextBlock11" Text="Stats" VerticalAlignment="Top" />
+        <TextBox Height="23" HorizontalAlignment="Left" Margin="12,413,0,0" Name="txtStats" VerticalAlignment="Top" Width="206" IsReadOnly="True"  Text="0-0-0-0-0-0" />
+        <Button Content="Edit" Height="23" HorizontalAlignment="Left" Margin="224,413,0,0" Name="btnEditStats" VerticalAlignment="Top" Width="46" />
+        <Button Content="Pokémon Options" Height="23" HorizontalAlignment="Left" Margin="12,442,0,0" Name="btnPokeOps" VerticalAlignment="Top" Width="126" />
+        <Button Content="Field Options" Height="23" HorizontalAlignment="Left" Margin="144,442,0,0" Name="btnFieldOps" VerticalAlignment="Top" Width="127" />
+        <sdk:AutoCompleteBox Height="23" HorizontalAlignment="Left" Margin="12,65,0,0" Name="cmbPokeName" 
+                             VerticalAlignment="Top" Width="126" IsTextCompletionEnabled="True" 
+                             IsDropDownOpen="True">
+            <sdk:AutoCompleteBox.ItemTemplate>
+                <sdk:HierarchicalDataTemplate>
+                    <StackPanel Orientation="Horizontal">
+                        <Image Width="32" Height="32" Source="{Binding Path=Sprite}"
+                               Visibility="{Binding Path=SpriteVisibility}"></Image>
+                        <TextBlock Text="{Binding Path=Name}" VerticalAlignment="Center" Padding="0,2,0,0"></TextBlock>
+                    </StackPanel>
+                </sdk:HierarchicalDataTemplate>
+            </sdk:AutoCompleteBox.ItemTemplate>
+        </sdk:AutoCompleteBox>
+        <CheckBox Content="Filter" Height="16" HorizontalAlignment="Left" Margin="53,152,0,0" Name="chkAbiFilter" VerticalAlignment="Top" IsChecked="True" IsEnabled="True" />
+        <CheckBox Content="Filter" Height="16" HorizontalAlignment="Left" Margin="53,209,0,0" Name="chkMoveFilter" VerticalAlignment="Top" IsChecked="True" IsEnabled="False" />
+        <ComboBox Height="23" HorizontalAlignment="Left" Margin="13,239,0,0" Name="cmbMove2" VerticalAlignment="Top" Width="205"
+                  Visibility="Collapsed" SelectedValue="{Binding Path=SelectedItem, Mode=TwoWay, ElementName=cmbMove}" />
+        <Button Content="Reset" Height="23" HorizontalAlignment="Left" Margin="224,181,0,0" Name="Button1" VerticalAlignment="Top" Width="47" />
+        <Button Content="All 31" Height="19" HorizontalAlignment="Left" Margin="171,328,0,0" Name="Button2" VerticalAlignment="Top" Width="47" FontSize="10" Style="{StaticResource FlatButton}" />
+        <Button Content="All 0" Height="19" HorizontalAlignment="Left" Margin="119,328,0,0" Name="Button3" VerticalAlignment="Top" Width="46" FontSize="10" Style="{StaticResource FlatButton}" />
+        <StackPanel Margin="46,272,0,0" Orientation="Horizontal">
+            <Button Content="Max Phys." Height="19" HorizontalAlignment="Left" Name="Button4" VerticalAlignment="Top" Width="56" FontSize="10" Style="{StaticResource FlatButton}" />
+            <Button Content="Max Spec." Height="19" HorizontalAlignment="Left" Name="Button5" Margin="5,0,0,0" VerticalAlignment="Top" Width="56" FontSize="10" Style="{StaticResource FlatButton}" />
+            <Button Content="Reset" Height="19" HorizontalAlignment="Left" Name="Button6" Margin="5,0,0,0" VerticalAlignment="Top" Width="51" FontSize="10" Style="{StaticResource FlatButton}" />
+        </StackPanel>
+        <!--<my:Activity HorizontalAlignment="Left" Margin="117,36,0,0" x:Name="Activity1" VerticalAlignment="Top" Height="23" Width="21" />
+        <my:Activity HorizontalAlignment="Left" Margin="117,94,0,0" x:Name="Activity2" VerticalAlignment="Top" Height="23" Width="21" Visibility="Collapsed" />-->
+    </Grid>
+</UserControl>
